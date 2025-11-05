@@ -55,7 +55,7 @@ st.dataframe(pd.DataFrame({target_name: y}).head(20), width='stretch')
 
 # ---- 3) Train/Test split shapes ----
 test_size = st.sidebar.slider(
-    "Proporción de test", min_value=0.1, max_value=0.4, value=0.2, step=0.05
+    "Proporción de test", min_value=0.1, max_value=0.4, value=0.3, step=0.05
 )
 random_state = st.sidebar.number_input("Random state", min_value=0, value=0, step=1)
 
