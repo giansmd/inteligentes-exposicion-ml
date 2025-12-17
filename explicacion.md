@@ -140,5 +140,3 @@ Este script monta una demostración completa de regresión lineal sobre el datas
 3. Obtener el R² al instante.  
 4. Explorar visualmente cómo de buenas son las predicciones.  
 5. Descargar los resultados para analizarlos fuera de la app.
-
-¡Listo! Así voy entendiendo paso a paso cómo se conecta ciencia de datos con una interfaz interactiva.
