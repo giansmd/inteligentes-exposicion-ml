@@ -3,7 +3,7 @@ Regresión Polinómica - California Housing
 Aplicación Streamlit para predicción de precios de viviendas
 usando regresión polinómica.
 
-Autor: Persona 3 - Equipo de Algoritmos de Regresión
+Autor: Equipo de Algoritmos de Regresión
 """
 
 import numpy as np
