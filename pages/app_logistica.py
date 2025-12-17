@@ -3,10 +3,22 @@ import pandas as pd
 from sklearn.datasets import load_breast_cancer
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Configuración de la página de Streamlit
 st.set_page_config(page_title="Regresión Logística - Breast Cancer", layout="wide")
+
+
+# Función para graficar la matriz de confusión
+def plot_confusion_matrix(y_true, y_pred):
+    cm = confusion_matrix(y_true, y_pred)
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues")
+    plt.xlabel("Predicción")
+    plt.ylabel("Realidad")
+    plt.title("Matriz de Confusión")
+    st.pyplot(plt)
 
 
 def main():
@@ -72,6 +84,10 @@ def main():
         }
     )
     st.dataframe(resultados_df)
+
+    # Gráfica de la matriz de confusión
+    st.subheader("Matriz de Confusión")
+    plot_confusion_matrix(y_test, y_pred)
 
     # Sección: Exportar resultados para evaluación posterior
     st.header("4) Exportar Resultados (y_pred, y_prob)")
